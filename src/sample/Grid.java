@@ -3,6 +3,7 @@ package sample;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -15,15 +16,13 @@ import javafx.stage.Stage;
  */
 public class Grid extends Application{
 
-    Stage window;
-
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        window = primaryStage;
+        Stage window = primaryStage;
         window.setTitle("yiyi");
 
         GridPane gridPane = new GridPane();
@@ -33,22 +32,25 @@ public class Grid extends Application{
 
         //name label
         Label name = new Label("username:");
-        GridPane.setConstraints(name, 0, 0);
+//        GridPane.setConstraints(name, 0, 0);
 
         //name input
         TextField inname = new TextField("pls input your name");
-        GridPane.setConstraints(inname, 1, 0);
+//        GridPane.setConstraints(inname, 1, 0);
 
         //password label
         Label pass = new Label("password:");
-        GridPane.setConstraints(name, 0, 1);
+//        GridPane.setConstraints(name, 0, 1);
 
         //password input
         PasswordField inpass = new PasswordField();
-        GridPane.setConstraints(inname, 1, 1);
+//        GridPane.setConstraints(inname, 1, 1);
+
+        Button confirm = new Button("Confirm");
 
         gridPane.addRow(0, name, inname);
         gridPane.addRow(1, pass, inpass);
+        gridPane.addRow(2, confirm);
 
         Scene scene = new Scene(gridPane, 400, 300);
 
