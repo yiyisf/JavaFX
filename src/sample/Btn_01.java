@@ -43,8 +43,8 @@ public class Btn_01 extends Application  {
             System.out.println("按钮内坐标" + e.getX() + ":" + e.getY());
             System.out.println("界面内坐标" + e.getSceneX() + ":" + e.getSceneY());
             System.out.println(btn.disableProperty().getValue());
-            btn.disableProperty().set(true);
-            AlertBox.display("settings", "弹出的信息,请点击close关闭!");
+//            btn.disableProperty().set(true);
+            System.out.println(ConfirmBox.display("settings", "弹出的信息,请点击close关闭!"));
         });
 
         StackPane layout = new StackPane();
